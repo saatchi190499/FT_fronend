@@ -54,11 +54,11 @@ const StartModal = ({ show, handleClose, isDataUpdated, setIsDataUpdated}) => {
         try {
             const response = await axios.get('http://localhost:8000/api/export_scenario/', {
                 params: { chooseScenario: chooseScenario }});
-            const blob = new Blob([response.data.events_csv], { type: 'text/csv' });
-            const blobT = new Blob([response.data.trends_csv], { type: 'text/csv' });
+            //const blob = new Blob([response.data.events_csv], { type: 'text/csv' });
+            //const blobT = new Blob([response.data.trends_csv], { type: 'text/csv' });
             
-            saveAs(blob, 'Events1.csv');
-            saveAs(blobT, 'Trends1.csv');
+            //saveAs(blob, 'Events1.csv');
+            //saveAs(blobT, 'Trends1.csv');
             if (response.status === 200) {
                 // handleRunScenario();
                 console.log("ok");
